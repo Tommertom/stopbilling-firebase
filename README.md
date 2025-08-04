@@ -5,7 +5,9 @@ A Firebase Cloud Function that automatically disables billing for your Google Cl
 
 ## 🚨 Important Warning
 
-**This function will completely disable billing for your project, which will shut down all billable services.** Use with caution and make sure you understand the implications.
+**This function will completely disable billing for your project, which will shut down all billable services, but not necessarily deletes data.** 
+From my experience it did not delete any data from Firebase, nor remove the functions. Still - use with caution and make sure you understand the implications by testing on a project first. 
+Also to test how you can recover from a disabled state. 
 
 ## Features
 
