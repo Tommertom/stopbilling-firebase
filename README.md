@@ -3,6 +3,9 @@
 
 A Firebase Cloud Function that automatically disables billing for your Google Cloud Platform project when spending exceeds a specified threshold. This helps prevent unexpected charges by automatically unlinking your billing account when costs reach your defined limit.
 
+If you don't want to code it yourself - try a firebase extension like [Auto Stop Services](https://extensions.dev/extensions/kurtweston/functions-auto-stop-billing)? - I haven't tried it myself.
+
+
 ## 🚨 Important Warning
 
 **This function will completely disable billing for your project, which will shut down all billable services, but not necessarily deletes data.** 
@@ -126,7 +129,6 @@ This project is based on Google Cloud's official documentation and best practice
 - **[YouTube Tutorial: GCP Billing Cap Setup](https://youtu.be/NWrZwXK92IM)** - Video walkthrough of the setup process
 
 Feel free to submit issues and enhancement requests!
-
 
 
 ## Disclaimer
