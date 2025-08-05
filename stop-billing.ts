@@ -69,7 +69,7 @@ export const stopBilling = onMessagePublished(
 
 async function handlePubSub(data: any) {
   const amountSpent = data.costAmount;
-  const treshHold = 50;
+  const treshold = 50;
   const alertThresholdExceeded =
     data.alertThresholdExceeded === undefined
       ? false
@@ -80,11 +80,11 @@ async function handlePubSub(data: any) {
     return "Amount spent is undefined - this is weird - report to admin";
   }
 
-  if (amountSpent < treshHold) {
+  if (amountSpent < treshold) {
     return "No action necessary. (Current cost: " + amountSpent + ")";
   }
 
-  if (amountSpent > treshHold || alertThresholdExceeded) {
+  if (amountSpent > treshold || alertThresholdExceeded) {
     const billingEnabled = await _isBillingEnabled(PROJECT_NAME);
     if (billingEnabled) {
       console.log("Billing is enabled, disabling now");
